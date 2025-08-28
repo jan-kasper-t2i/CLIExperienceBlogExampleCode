@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InterfaceBackCpp\InterfaceBackCpp.vcxproj" />
+    <ProjectReference Include="..\Interface\Interface.csproj" />
   </ItemGroup>
 
 </Project>

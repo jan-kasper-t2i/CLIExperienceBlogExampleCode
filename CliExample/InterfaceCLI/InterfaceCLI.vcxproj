@@ -123,6 +123,8 @@
     <ClInclude Include="InterfaceCLI.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Treasure.h" />
+    <ClInclude Include="TreasureConverter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -133,6 +135,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Treasure.cpp" />
+    <ClCompile Include="TreasureConverter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -143,6 +147,9 @@
   <ItemGroup>
     <ProjectReference Include="..\CSharpWorld\CSharpWorld.csproj">
       <Project>{b291ae17-2ecc-4f35-82f1-053208f5ae27}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Project>{7cd7d3b7-dff6-4926-9d54-ee8eeb22f9fa}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -15,4 +15,9 @@ namespace InterfaceBackCpp {
 		auto unmanagedString = msclr::interop::marshal_as<std::wstring>(text);
 		nativeCppLibClass.ReceivedTextFromCSharp(unmanagedString);
 	}
+
+	void InterfaceForCSharp::SendTreasureToCpp(Interface::ITreasure^ treasure)
+	{
+		std::cout << "InterfaceForCSharp::SendTreasureToCpp reached! \n";
+	}
 }

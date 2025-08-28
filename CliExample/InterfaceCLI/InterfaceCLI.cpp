@@ -8,16 +8,19 @@
 
 #include <iostream>
 
+#include "TreasureConverter.h"
 
 
 using namespace System;
 using namespace CSharpWorld;
+using namespace Interface;
 
 class CSharpInterface
 {
 public:
 	msclr::auto_gcroot<CSharpLib^> CSharpLib;
 };
+
 
 CppCliWrapper::CppCliWrapper()
 {
@@ -36,6 +39,13 @@ void CppCliWrapper::SendDataToCSharp(std::wstring text)
 
 	String^ managedString = msclr::interop::marshal_as<String^>(text);
 	_managedState->CSharpLib->ReceiveDataFromCpp(managedString);
+}
+
+void CppCliWrapper::SendTreasure(Treasure& treasure)
+{
+	std::cout << "SendTreasure called, Wrapper reached! \n";
+	ITreasure^ managedTreasure = TreasureConverter::ToITreasure(treasure);
+	_managedState->CSharpLib->ReceiveTreasure(managedTreasure);
 }
 
 

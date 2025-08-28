@@ -8,5 +8,6 @@ namespace InterfaceBackCpp {
         InterfaceForCSharp() {}
 
         void SendTextToCpp(String^ text);
+        void SendTreasureToCpp(Interface::ITreasure^ treasure);
     };
 }
